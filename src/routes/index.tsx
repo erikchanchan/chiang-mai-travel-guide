@@ -20,9 +20,10 @@ function Index() {
   const frameRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
-    // The page is served from a blob document, so site-relative photo paths have
-    // no origin of their own; make them absolute before handing the file to the frame.
-    const html = landingPage.replaceAll("/__l5e/", `${window.location.origin}/__l5e/`);
+    // The page is served from a blob document with no base URL of its own, so the
+    // photos it references relatively from images/ would not resolve; make those
+    // references absolute before handing the file to the frame.
+    const html = landingPage.replace(/(url\(['"]?)(images\/)/g, `$1${window.location.origin}/$2`);
     const frame = frameRef.current;
     const url = URL.createObjectURL(new Blob([html], { type: "text/html" }));
     if (!frame) {
