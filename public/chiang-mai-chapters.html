@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Chiang Mai Chapters | Plan Your Northern Thailand Trip</title>
+  <meta name="description" content="Curated Chiang Mai hotels, ethical elephant experiences, Doi Inthanon tours, transport and travel insurance — plus a free daily budget estimator." />
+  <meta property="og:title" content="The Chiang Mai Chapters" />
+  <meta property="og:description" content="Your hand-picked guide to stays, tours and transport in Chiang Mai, Thailand." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            sans: ['Manrope', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            teak: { 50: '#fbf6ef', 100: '#f3e6d3', 300: '#d9b48a', 500: '#b5763f', 700: '#7a4a24', 900: '#3b2414' },
+            jungle: { 400: '#4f8a6b', 600: '#2f5e48', 800: '#1b3a2d', 950: '#0d1f18' },
+            saffron: { 400: '#f4b740', 500: '#e89a1c', 600: '#c97c0c' }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .hero-bg {
+      background-image:
+        linear-gradient(180deg, rgba(13,31,24,.55) 0%, rgba(13,31,24,.35) 40%, rgba(13,31,24,.9) 100%),
+        url('https://images.unsplash.com/photo-1598935898639-81586f7d2129?auto=format&fit=crop&w=2000&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .card-img { background-size: cover; background-position: center; }
+    input[type=range] { accent-color: #e89a1c; }
+    .fade-in { animation: fade .45s ease both; }
+    @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  </style>
+</head>
+<body class="bg-teak-50 font-sans text-jungle-950 antialiased">
+
+  <!-- Affiliate Disclosure Banner -->
+  <aside id="disclosure" role="note" aria-label="Affiliate disclosure" class="bg-jungle-950 text-teak-100 text-xs sm:text-sm">
+    <div class="max-w-6xl mx-auto px-4 py-2.5 flex items-start sm:items-center gap-3">
+      <p class="flex-1 leading-relaxed">
+        <strong class="text-saffron-400">Affiliate Disclosure:</strong>
+        Some links on this page are affiliate links. If you book through them, The Chiang Mai Chapters may earn a commission at no extra cost to you. We only recommend services we trust. Prices shown are estimates and may change.
+      </p>
+      <button id="closeDisclosure" type="button" aria-label="Dismiss disclosure" class="shrink-0 rounded-full w-7 h-7 grid place-items-center hover:bg-white/10">&times;</button>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-teak-50/90 backdrop-blur border-b border-teak-100">
+    <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between" aria-label="Main">
+      <a href="#top" class="font-display text-lg sm:text-xl font-bold tracking-tight">The Chiang Mai <span class="text-saffron-600">Chapters</span></a>
+      <ul class="hidden md:flex gap-7 text-sm font-semibold text-jungle-800">
+        <li><a href="#stay" class="hover:text-saffron-600">Stay</a></li>
+        <li><a href="#do" class="hover:text-saffron-600">Experiences</a></li>
+        <li><a href="#budget" class="hover:text-saffron-600">Budget</a></li>
+        <li><a href="#transit" class="hover:text-saffron-600">Transit &amp; Safety</a></li>
+      </ul>
+      <button id="menuBtn" type="button" class="md:hidden p-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+    <ul id="mobileMenu" class="hidden md:hidden border-t border-teak-100 px-4 py-3 space-y-2 font-semibold bg-teak-50">
+      <li><a href="#stay" class="block py-1">Stay</a></li>
+      <li><a href="#do" class="block py-1">Experiences</a></li>
+      <li><a href="#budget" class="block py-1">Budget</a></li>
+      <li><a href="#transit" class="block py-1">Transit &amp; Safety</a></li>
+    </ul>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero-bg text-white">
+      <div class="max-w-6xl mx-auto px-4 pt-24 pb-28 sm:pt-32 sm:pb-36">
+        <p class="uppercase tracking-[0.25em] text-xs sm:text-sm text-saffron-400 font-bold mb-5">Northern Thailand Trip Planner</p>
+        <h1 class="font-display font-black text-4xl sm:text-6xl lg:text-7xl leading-[1.05] max-w-3xl">
+          Write your next chapter in the mountains of Chiang Mai.
+        </h1>
+        <p class="mt-6 text-base sm:text-lg text-teak-100 max-w-xl">
+          Temples at dawn, misty peaks, night markets and ethical elephant sanctuaries. Hand-picked stays, tours and transport, planned in one place.
+        </p>
+        <div class="mt-9 flex flex-col sm:flex-row gap-3">
+          <a href="#stay" class="inline-flex justify-center items-center rounded-full bg-saffron-500 hover:bg-saffron-400 text-jungle-950 font-bold px-7 py-4 shadow-lg shadow-saffron-500/30 transition">Find Your Stay</a>
+          <a href="#budget" class="inline-flex justify-center items-center rounded-full border border-white/40 hover:bg-white/10 font-semibold px-7 py-4 transition">Estimate My Budget</a>
+        </div>
+        <dl class="mt-14 grid grid-cols-3 gap-4 max-w-lg text-center sm:text-left">
+          <div><dt class="text-xs text-teak-300">Best season</dt><dd class="font-display text-xl font-bold">Nov – Feb</dd></div>
+          <div><dt class="text-xs text-teak-300">Temples</dt><dd class="font-display text-xl font-bold">300+</dd></div>
+          <div><dt class="text-xs text-teak-300">From Bangkok</dt><dd class="font-display text-xl font-bold">1h flight</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Accommodation -->
+    <section id="stay" class="max-w-6xl mx-auto px-4 py-20 sm:py-24">
+      <header class="max-w-2xl mb-12">
+        <p class="text-saffron-600 font-bold uppercase tracking-widest text-xs mb-3">Chapter One · Where to Stay</p>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold">Pick the neighborhood that fits your story.</h2>
+      </header>
+      <div class="grid gap-7 md:grid-cols-3">
+        <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col">
+          <div class="card-img h-52" style="background-image:url('https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=900&q=80')" role="img" aria-label="Temple in Chiang Mai Old City"></div>
+          <div class="p-6 flex flex-col flex-1">
+            <span class="text-xs font-bold text-jungle-600 uppercase tracking-wider">Culture &amp; Temples</span>
+            <h3 class="font-display text-2xl font-bold mt-1">Old City</h3>
+            <p class="text-sm text-jungle-800/80 mt-3 flex-1">Inside the ancient moat: walk to Wat Phra Singh, the Sunday Walking Street and boutique guesthouses in teak houses.</p>
+            <div class="mt-6 grid grid-cols-2 gap-2">
+              <a data-aff="agoda" data-area="old-city" href="https://www.agoda.com/search?city=7401" target="_blank" rel="sponsored noopener" class="text-center rounded-full bg-jungle-800 hover:bg-jungle-600 text-white text-sm font-bold py-3">Agoda</a>
+              <a data-aff="booking" data-area="old-city" href="https://www.booking.com/searchresults.html?ss=Old+City%2C+Chiang+Mai" target="_blank" rel="sponsored noopener" class="text-center rounded-full border-2 border-jungle-800 text-jungle-800 hover:bg-jungle-800 hover:text-white text-sm font-bold py-3">Booking.com</a>
+            </div>
+          </div>
+        </article>
+        <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col">
+          <div class="card-img h-52" style="background-image:url('https://images.unsplash.com/photo-1554797589-7241bb691973?auto=format&fit=crop&w=900&q=80')" role="img" aria-label="Café scene in Nimman"></div>
+          <div class="p-6 flex flex-col flex-1">
+            <span class="text-xs font-bold text-jungle-600 uppercase tracking-wider">Cafés &amp; Nightlife</span>
+            <h3 class="font-display text-2xl font-bold mt-1">Nimman</h3>
+            <p class="text-sm text-jungle-800/80 mt-3 flex-1">The trendy, digital-nomad heart of the city: specialty coffee, rooftop bars, co-working spaces and modern condos.</p>
+            <div class="mt-6 grid grid-cols-2 gap-2">
+              <a data-aff="agoda" data-area="nimman" href="https://www.agoda.com/search?city=7401&textToSearch=Nimmanhaemin" target="_blank" rel="sponsored noopener" class="text-center rounded-full bg-jungle-800 hover:bg-jungle-600 text-white text-sm font-bold py-3">Agoda</a>
+              <a data-aff="booking" data-area="nimman" href="https://www.booking.com/searchresults.html?ss=Nimmanhaemin%2C+Chiang+Mai" target="_blank" rel="sponsored noopener" class="text-center rounded-full border-2 border-jungle-800 text-jungle-800 hover:bg-jungle-800 hover:text-white text-sm font-bold py-3">Booking.com</a>
+            </div>
+          </div>
+        </article>
+        <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col">
+          <div class="card-img h-52" style="background-image:url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=900&q=80')" role="img" aria-label="Riverside resort"></div>
+          <div class="p-6 flex flex-col flex-1">
+            <span class="text-xs font-bold text-jungle-600 uppercase tracking-wider">Calm &amp; Romantic</span>
+            <h3 class="font-display text-2xl font-bold mt-1">Riverside</h3>
+            <p class="text-sm text-jungle-800/80 mt-3 flex-1">Along the Ping River: luxury resorts, candle-lit dinners and quiet mornings close to the Night Bazaar.</p>
+            <div class="mt-6 grid grid-cols-2 gap-2">
+              <a data-aff="agoda" data-area="riverside" href="https://www.agoda.com/search?city=7401&textToSearch=Riverside" target="_blank" rel="sponsored noopener" class="text-center rounded-full bg-jungle-800 hover:bg-jungle-600 text-white text-sm font-bold py-3">Agoda</a>
+              <a data-aff="booking" data-area="riverside" href="https://www.booking.com/searchresults.html?ss=Riverside%2C+Chiang+Mai" target="_blank" rel="sponsored noopener" class="text-center rounded-full border-2 border-jungle-800 text-jungle-800 hover:bg-jungle-800 hover:text-white text-sm font-bold py-3">Booking.com</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Activities -->
+    <section id="do" class="bg-teak-100/60 py-20 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4">
+        <header class="max-w-2xl mb-12">
+          <p class="text-saffron-600 font-bold uppercase tracking-widest text-xs mb-3">Chapter Two · Experiences</p>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold">Two days you'll remember forever.</h2>
+        </header>
+        <div class="grid gap-7 md:grid-cols-2">
+          <article class="relative rounded-3xl overflow-hidden min-h-[440px] flex items-end text-white card-img" style="background-image:linear-gradient(180deg,transparent 20%,rgba(13,31,24,.92) 100%),url('https://images.unsplash.com/photo-1585970480901-90d6bb2a48b5?auto=format&fit=crop&w=1200&q=80')">
+            <div class="p-7 sm:p-9">
+              <span class="inline-block bg-saffron-500 text-jungle-950 text-xs font-bold px-3 py-1 rounded-full">No riding · No shows</span>
+              <h3 class="font-display text-3xl font-bold mt-4">Ethical Elephant Experience</h3>
+              <p class="text-teak-100 mt-3 max-w-md text-sm sm:text-base">Feed, walk alongside and observe rescued elephants in a true sanctuary setting. Half-day and full-day options with hotel pickup.</p>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a data-aff="klook" data-item="elephant" href="https://www.klook.com/search/?query=chiang%20mai%20elephant%20sanctuary" target="_blank" rel="sponsored noopener" class="rounded-full bg-saffron-500 hover:bg-saffron-400 text-jungle-950 font-bold px-6 py-3">Book on Klook</a>
+                <a data-aff="viator" data-item="elephant" href="https://www.viator.com/searchResults/all?text=chiang%20mai%20ethical%20elephant" target="_blank" rel="sponsored noopener" class="rounded-full border border-white/50 hover:bg-white/10 font-semibold px-6 py-3">Compare on Viator</a>
+              </div>
+            </div>
+          </article>
+          <article class="relative rounded-3xl overflow-hidden min-h-[440px] flex items-end text-white card-img" style="background-image:linear-gradient(180deg,transparent 20%,rgba(13,31,24,.92) 100%),url('https://images.unsplash.com/photo-1563492065599-3520f775eeed?auto=format&fit=crop&w=1200&q=80')">
+            <div class="p-7 sm:p-9">
+              <span class="inline-block bg-saffron-500 text-jungle-950 text-xs font-bold px-3 py-1 rounded-full">Thailand's highest peak</span>
+              <h3 class="font-display text-3xl font-bold mt-4">Doi Inthanon Day Tour</h3>
+              <p class="text-teak-100 mt-3 max-w-md text-sm sm:text-base">Twin royal pagodas, Wachirathan waterfall, cloud-forest trails and a Karen hill-tribe village, all in one guided day.</p>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a data-aff="klook" data-item="inthanon" href="https://www.klook.com/search/?query=doi%20inthanon" target="_blank" rel="sponsored noopener" class="rounded-full bg-saffron-500 hover:bg-saffron-400 text-jungle-950 font-bold px-6 py-3">Book on Klook</a>
+                <a data-aff="viator" data-item="inthanon" href="https://www.viator.com/searchResults/all?text=doi%20inthanon" target="_blank" rel="sponsored noopener" class="rounded-full border border-white/50 hover:bg-white/10 font-semibold px-6 py-3">Compare on Viator</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Budget Estimator -->
+    <section id="budget" class="max-w-6xl mx-auto px-4 py-20 sm:py-24">
+      <div class="grid lg:grid-cols-5 gap-10 items-start">
+        <header class="lg:col-span-2">
+          <p class="text-saffron-600 font-bold uppercase tracking-widest text-xs mb-3">Chapter Three · Budget</p>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold">Chiang Mai Daily Budget Estimator</h2>
+          <p class="mt-5 text-jungle-800/80">Set your trip length and travel style. We'll estimate your total in Thai Baht, including stay, food, transport and activities.</p>
+        </header>
+        <div class="lg:col-span-3 bg-white rounded-3xl shadow-xl shadow-teak-300/30 p-6 sm:p-9 border border-teak-100">
+          <form id="budgetForm" class="space-y-7" onsubmit="return false;">
+            <div>
+              <div class="flex justify-between items-baseline mb-3">
+                <label for="days" class="font-bold">Trip Duration (Days)</label>
+                <input id="daysNum" type="number" min="1" max="60" value="5" aria-label="Trip duration in days" class="w-20 text-right rounded-xl border border-teak-300 px-3 py-1.5 font-bold focus:outline-none focus:ring-2 focus:ring-saffron-500" />
+              </div>
+              <input id="days" type="range" min="1" max="30" value="5" class="w-full" />
+            </div>
+            <fieldset>
+              <legend class="font-bold mb-3">Travel Style Tier</legend>
+              <div class="grid grid-cols-3 gap-2 sm:gap-3" id="tiers">
+                <label class="cursor-pointer">
+                  <input type="radio" name="tier" value="budget" class="peer sr-only" />
+                  <span class="block text-center rounded-2xl border-2 border-teak-100 peer-checked:border-saffron-500 peer-checked:bg-saffron-400/15 py-3 sm:py-4 transition">
+                    <span class="block font-bold text-sm sm:text-base">Budget</span><span class="block text-xs text-jungle-800/70">Hostels &amp; street food</span>
+                  </span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="tier" value="mid" class="peer sr-only" checked />
+                  <span class="block text-center rounded-2xl border-2 border-teak-100 peer-checked:border-saffron-500 peer-checked:bg-saffron-400/15 py-3 sm:py-4 transition">
+                    <span class="block font-bold text-sm sm:text-base">Mid-Range</span><span class="block text-xs text-jungle-800/70">Boutique &amp; cafés</span>
+                  </span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="tier" value="luxury" class="peer sr-only" />
+                  <span class="block text-center rounded-2xl border-2 border-teak-100 peer-checked:border-saffron-500 peer-checked:bg-saffron-400/15 py-3 sm:py-4 transition">
+                    <span class="block font-bold text-sm sm:text-base">Luxury</span><span class="block text-xs text-jungle-800/70">Resorts &amp; private tours</span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+          </form>
+
+          <div class="mt-8 rounded-2xl bg-jungle-950 text-white p-6" aria-live="polite">
+            <p class="text-teak-300 text-sm">Estimated total</p>
+            <p class="font-display text-4xl sm:text-5xl font-black mt-1"><span id="total">฿0</span></p>
+            <p class="text-sm text-teak-100 mt-1"><span id="perDay">฿0</span> per day · approx. <span id="usd">$0</span> USD</p>
+            <dl id="breakdown" class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-5 text-xs"></dl>
+          </div>
+
+          <div id="recommendation" class="mt-6 rounded-2xl border-2 border-dashed border-saffron-500 bg-saffron-400/10 p-6 fade-in"></div>
+          <p class="text-[11px] text-jungle-800/60 mt-4">Estimates are based on typical 2026 prices and exclude international flights. Recommended links are affiliate links.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transit & Safety -->
+    <section id="transit" class="bg-jungle-950 text-white py-20 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4">
+        <header class="max-w-2xl mb-12">
+          <p class="text-saffron-400 font-bold uppercase tracking-widest text-xs mb-3">Chapter Four · Transit &amp; Safety</p>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold">Get there smoothly. Travel covered.</h2>
+        </header>
+        <div class="grid gap-7 md:grid-cols-2">
+          <article class="rounded-3xl bg-jungle-800/60 border border-white/10 p-7 sm:p-9">
+            <div class="w-12 h-12 rounded-2xl bg-saffron-500 text-jungle-950 grid place-items-center text-2xl" aria-hidden="true">🚆</div>
+            <h3 class="font-display text-2xl font-bold mt-5">Trains, Buses &amp; Vans</h3>
+            <p class="text-teak-100 mt-3">Take the scenic overnight sleeper from Bangkok, or a minivan to Pai and Chiang Rai. Compare schedules and book e-tickets instantly.</p>
+            <ul class="mt-5 space-y-2 text-sm text-teak-100">
+              <li>✓ Bangkok → Chiang Mai sleeper train</li>
+              <li>✓ Chiang Mai → Pai (762 curves!) minivan</li>
+              <li>✓ Chiang Mai → Chiang Rai VIP bus</li>
+            </ul>
+            <a data-aff="12go" href="https://12go.asia/en/travel/bangkok/chiang-mai" target="_blank" rel="sponsored noopener" class="mt-7 inline-flex rounded-full bg-saffron-500 hover:bg-saffron-400 text-jungle-950 font-bold px-7 py-4">Check Routes on 12Go Asia</a>
+          </article>
+          <article class="rounded-3xl bg-jungle-800/60 border border-white/10 p-7 sm:p-9">
+            <div class="w-12 h-12 rounded-2xl bg-saffron-500 text-jungle-950 grid place-items-center text-2xl" aria-hidden="true">🛡️</div>
+            <h3 class="font-display text-2xl font-bold mt-5">Travel Medical Insurance</h3>
+            <p class="text-teak-100 mt-3">Scooter spills, mountain trails or a sudden fever: Thai hospitals are excellent but not free. Get flexible cover you can buy even after you've left home.</p>
+            <ul class="mt-5 space-y-2 text-sm text-teak-100">
+              <li>✓ Subscription-style, cancel anytime</li>
+              <li>✓ Ideal for nomads in Nimman</li>
+              <li>✓ Covers 180+ countries</li>
+            </ul>
+            <a data-aff="safetywing" href="https://safetywing.com/nomad-insurance" target="_blank" rel="sponsored noopener" class="mt-7 inline-flex rounded-full bg-white hover:bg-teak-100 text-jungle-950 font-bold px-7 py-4">Get a SafetyWing Quote</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-jungle-950 border-t border-white/10 text-teak-300 text-sm">
+    <div class="max-w-6xl mx-auto px-4 py-10 flex flex-col sm:flex-row gap-4 justify-between">
+      <p><span class="font-display text-white font-bold">The Chiang Mai Chapters</span> · &copy; <span id="year"></span></p>
+      <p class="max-w-md text-xs">We participate in affiliate programs including Agoda, Booking.com, Klook, Viator, 12Go Asia and SafetyWing. Commissions help keep this guide free.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // ===== Affiliate configuration: replace with your own partner IDs =====
+      var AFFILIATE = {
+        agoda:      { param: 'cid',      id: '1234567' },
+        booking:    { param: 'aid',      id: '1234567' },
+        klook:      { param: 'aid',      id: '12345' },
+        viator:     { param: 'pid',      id: 'P00012345' },
+        '12go':     { param: 'z',        id: '1234567' },
+        safetywing: { param: 'referenceID', id: 'chiangmaichapters' }
+      };
+
+      function tag(url, partner, label) {
+        var cfg = AFFILIATE[partner];
+        if (!cfg) return url;
+        try {
+          var u = new URL(url);
+          u.searchParams.set(cfg.param, cfg.id);
+          u.searchParams.set('utm_source', 'chiangmaichapters');
+          u.searchParams.set('utm_medium', 'affiliate');
+          if (label) u.searchParams.set('utm_content', label);
+          return u.toString();
+        } catch (e) { return url; }
+      }
+
+      function track(partner, label) {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'affiliate_click', { partner: partner, label: label });
+        }
+        if (window.console) console.info('[affiliate_click]', partner, label);
+      }
+
+      function decorateLinks(root) {
+        (root || document).querySelectorAll('a[data-aff]').forEach(function (a) {
+          if (a.dataset.tagged) return;
+          var partner = a.dataset.aff;
+          var label = a.dataset.area || a.dataset.item || a.dataset.tier || 'general';
+          a.href = tag(a.href, partner, label);
+          a.dataset.tagged = '1';
+          a.addEventListener('click', function () { track(partner, label); });
+        });
+      }
+
+      // ===== Budget estimator =====
+      var TIERS = {
+        budget: {
+          name: 'Budget',
+          daily: { stay: 450, food: 350, transport: 150, activities: 300 },
+          title: 'Backpacker-friendly beds in the Old City',
+          text: 'On a budget? Top-rated Old City hostels and guesthouses start around ฿300–500/night, walkable to temples and the Sunday Walking Street. Lock in free-cancellation rates early during high season.',
+          cta: 'Find Budget Stays on Agoda',
+          partner: 'agoda',
+          url: 'https://www.agoda.com/search?city=7401&priceTo=800'
+        },
+        mid: {
+          name: 'Mid-Range',
+          daily: { stay: 1500, food: 800, transport: 350, activities: 900 },
+          title: 'Boutique hotels in Nimman + a sanctuary day',
+          text: 'Your sweet spot: stylish Nimman boutique hotels with pools for ฿1,200–2,000/night. Spend the savings on a half-day ethical elephant sanctuary visit — the #1 experience travelers rave about.',
+          cta: 'Book an Ethical Elephant Day on Klook',
+          partner: 'klook',
+          url: 'https://www.klook.com/search/?query=chiang%20mai%20elephant%20sanctuary'
+        },
+        luxury: {
+          name: 'Luxury',
+          daily: { stay: 6500, food: 2500, transport: 1200, activities: 3000 },
+          title: 'Riverside resorts & private guided tours',
+          text: 'Go all in: five-star Ping River resorts with spa rituals and private Doi Inthanon tours with your own driver and guide. Booking.com Genius members often unlock extra perks at these properties.',
+          cta: 'See Luxury Riverside Resorts on Booking.com',
+          partner: 'booking',
+          url: 'https://www.booking.com/searchresults.html?ss=Riverside%2C+Chiang+Mai&nflt=class%3D5'
+        }
+      };
+      var THB_PER_USD = 34;
+
+      var range = document.getElementById('days');
+      var num = document.getElementById('daysNum');
+      var rec = document.getElementById('recommendation');
+      var fmt = function (n) { return '฿' + Math.round(n).toLocaleString('en-US'); };
+
+      function currentTier() {
+        var c = document.querySelector('input[name="tier"]:checked');
+        return c ? c.value : 'mid';
+      }
+
+      function clampDays(v) {
+        v = parseInt(v, 10);
+        if (isNaN(v) || v < 1) v = 1;
+        if (v > 60) v = 60;
+        return v;
+      }
+
+      function update() {
+        var days = clampDays(num.value);
+        var key = currentTier();
+        var t = TIERS[key];
+        var d = t.daily;
+        var perDay = d.stay + d.food + d.transport + d.activities;
+        var total = perDay * days;
+
+        document.getElementById('total').textContent = fmt(total);
+        document.getElementById('perDay').textContent = fmt(perDay);
+        document.getElementById('usd').textContent = '$' + Math.round(total / THB_PER_USD).toLocaleString('en-US');
+
+        var labels = { stay: 'Stay', food: 'Food', transport: 'Transport', activities: 'Activities' };
+        document.getElementById('breakdown').innerHTML = Object.keys(labels).map(function (k) {
+          return '<div class="rounded-xl bg-white/5 px-3 py-2"><dt class="text-teak-300">' + labels[k] +
+            '</dt><dd class="font-bold text-sm">' + fmt(d[k] * days) + '</dd></div>';
+        }).join('');
+
+        rec.classList.remove('fade-in'); void rec.offsetWidth; rec.classList.add('fade-in');
+        rec.innerHTML =
+          '<p class="text-xs font-bold uppercase tracking-widest text-saffron-600">Recommended for ' + t.name + ' · ' + days + (days === 1 ? ' day' : ' days') + '</p>' +
+          '<h3 class="font-display text-xl sm:text-2xl font-bold mt-2">' + t.title + '</h3>' +
+          '<p class="text-sm text-jungle-800/80 mt-2">' + t.text + '</p>' +
+          '<a data-aff="' + t.partner + '" data-tier="calc-' + key + '" href="' + t.url + '" target="_blank" rel="sponsored noopener" ' +
+          'class="mt-5 inline-flex rounded-full bg-jungle-800 hover:bg-jungle-600 text-white font-bold px-6 py-3">' + t.cta + ' &rarr;</a>';
+        decorateLinks(rec);
+      }
+
+      range.addEventListener('input', function () { num.value = range.value; update(); });
+      num.addEventListener('input', function () {
+        var v = clampDays(num.value);
+        range.value = Math.min(v, 30);
+        update();
+      });
+      num.addEventListener('blur', function () { num.value = clampDays(num.value); });
+      document.querySelectorAll('input[name="tier"]').forEach(function (r) { r.addEventListener('change', update); });
+
+      // ===== UI helpers =====
+      document.getElementById('closeDisclosure').addEventListener('click', function () {
+        document.getElementById('disclosure').style.display = 'none';
+      });
+      var menuBtn = document.getElementById('menuBtn');
+      var menu = document.getElementById('mobileMenu');
+      menuBtn.addEventListener('click', function () {
+        var open = menu.classList.toggle('hidden') === false;
+        menuBtn.setAttribute('aria-expanded', String(open));
+      });
+      menu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { menu.classList.add('hidden'); menuBtn.setAttribute('aria-expanded', 'false'); });
+      });
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      decorateLinks(document);
+      update();
+    })();
+  </script>
+</body>
+</html>
