@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
+import landingPage from "../../index.html?raw";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -15,9 +17,25 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const frameRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    const frame = frameRef.current;
+    const url = URL.createObjectURL(new Blob([landingPage], { type: "text/html" }));
+    if (!frame) {
+      URL.revokeObjectURL(url);
+      return;
+    }
+    frame.src = url;
+    return () => {
+      frame.removeAttribute("src");
+      URL.revokeObjectURL(url);
+    };
+  }, []);
+
   return (
     <iframe
-      src="/chiang-mai-chapters.html"
+      ref={frameRef}
       title="The Chiang Mai Chapters"
       className="fixed inset-0 h-full w-full border-0"
     />
